@@ -25,9 +25,11 @@ export function CardModal() {
 
   useEffect(() => {
     setParsedCards(JSON.parse(savedProducts || "[]"));
-    console.log(isActiveCartStatus, 99);
     
-    iconRef?.current?.click();
+    // Ստուգում ենք isActiveCartStatus-ը նախքան click() կանչելը
+    if (isActiveCartStatus) {
+      iconRef?.current?.click();
+    }
   }, [isActiveCartStatus]);
 
   const handleRemove = (itemId: string) => {
