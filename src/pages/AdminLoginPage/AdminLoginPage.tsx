@@ -14,9 +14,8 @@ import {
     FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import { useAppDispatch, useAppSelector } from "@/hooks"
+import { useAppDispatch } from "@/hooks"
 import { getAdmin } from "@/features/admins/adminsApi/adminsApi"
-import { adminsSelector } from "@/features/admins/adminsSelectors"
 import { useNavigate } from "react-router-dom"
 import { setIsAuth } from "@/features/admins/slices/adminsSlise"
 import { useState } from "react"
@@ -63,7 +62,6 @@ function AdminLoginPage() {
             console.error('Error fetching admin data:', error);
         }
     }
-
 
     return (
         <div className="container flex flex-col items-center  mt-[150px] gap-8">
