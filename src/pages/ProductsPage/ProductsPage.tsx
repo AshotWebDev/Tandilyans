@@ -1,10 +1,9 @@
-import { productsData } from "@/dataFolder/dataFolder"
+
 import ProductCard from "@/features/products/components/ProductCard"
 import { getProducts } from "@/features/products/productsApi.ts/productsApi"
 import { productsSelector } from "@/features/products/productsSelectors"
 import { useAppDispatch, useAppSelector } from "@/hooks"
 import { useEffect } from "react"
-import { useDispatch } from "react-redux"
 
 
 const ProductsPage = () => {

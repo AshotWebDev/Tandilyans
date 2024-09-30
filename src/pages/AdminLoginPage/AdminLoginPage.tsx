@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button"
 import {
     Form,
     FormControl,
-    FormDescription,
     FormField,
     FormItem,
     FormLabel,
@@ -35,7 +34,6 @@ const formSchema = z.object({
 
 function AdminLoginPage() {
     const dispatch = useAppDispatch()
-    const adminData = useAppSelector(adminsSelector)
     const navigate = useNavigate()
     const [showAlert, setShowAlert] = useState(false);
     const form = useForm<z.infer<typeof formSchema>>({

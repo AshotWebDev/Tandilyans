@@ -1,11 +1,11 @@
 import { sliderData } from "@/dataFolder/dataFolder";
 import React, { useState, useEffect, CSSProperties } from "react";
-import './BanerSlider.css'
+import './BanerSlider.css';
 
 interface SliderItem {
   id: string;
   img: string;
-  text:string
+  text: string;
 }
 
 const HomePageSlider: React.FC = () => {
@@ -25,9 +25,7 @@ const HomePageSlider: React.FC = () => {
   }, [autoplay, max]);
 
   const nextOne = () => setActive((prevActive) => (prevActive < max - 1 ? prevActive + 1 : 0));
-
   const prevOne = () => setActive((prevActive) => (prevActive > 0 ? prevActive - 1 : max - 1));
-
   const isActive = (value: number) => (active === value ? 'active' : '');
 
   const setSliderStyles = (): CSSProperties => {
@@ -72,6 +70,8 @@ const HomePageSlider: React.FC = () => {
     </>
   );
 
+  const toggleAutoplay = () => setAutoplay((prev) => !prev);
+
   return (
     <section className="slider">
       <div className="wrapper" style={setSliderStyles()}>
@@ -79,7 +79,9 @@ const HomePageSlider: React.FC = () => {
       </div>
       {renderArrows()}
       <ul className="dots-container">{renderDots()}</ul>
-     
+      <button onClick={toggleAutoplay}>
+        {autoplay ? "Pause" : "Play"}
+      </button>
     </section>
   );
 };

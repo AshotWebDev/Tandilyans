@@ -1,4 +1,4 @@
-import { productsData, responsive } from '@/dataFolder/dataFolder';
+import {responsive } from '@/dataFolder/dataFolder';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import ProductCard from './ProductCard';

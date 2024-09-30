@@ -11,7 +11,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { postOrder } from "@/features/order/orderApi/orderApi"
 import { orderMessageSelector } from "@/features/order/orderSelectors"
-import { useAppDispatch, useAppSelector } from "@/hooks"
+import { useAppDispatch } from "@/hooks"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useEffect, useState } from "react"
 import { useForm } from "react-hook-form"
@@ -43,7 +43,7 @@ const formSchema = z.object({
 
 const OrderPage = () => {
   const savedProducts = localStorage.getItem("savedProducts");
-  const [parsedCards, setParsedCards] = useState<any[]>(JSON.parse(savedProducts || "[]"));
+  const [parsedCards] = useState<any[]>(JSON.parse(savedProducts || "[]"));
   const { id } = useParams()
   const dispatch = useAppDispatch()
   const { state } = useLocation();

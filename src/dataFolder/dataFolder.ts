@@ -1,7 +1,6 @@
 import bannerImg1 from '@/assets/bannerImg1.avif'
 import bannerImg2 from '@/assets/bannerImg2.avif'
 import bannerImg3 from '@/assets/bannerImg3.webp'
-import bannerImg4 from '@/assets/bannerImg4.jpg'
 
 export  const sliderData = [
     {
@@ -22,11 +21,6 @@ export  const sliderData = [
         img: bannerImg3
     },
 
-    // {
-    //     id: '4',
-    //     text: 'lorem lorem lorem lorem4',
-    //     img: bannerImg4
-    // },
   ]
 
 
