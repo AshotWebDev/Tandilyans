@@ -27,7 +27,7 @@ export const getProducts = createAsyncThunk<Product[], number | undefined>(
 );
 
 
-export const postProducts = createAsyncThunk<Product[], number | undefined>(
+export const postProducts = createAsyncThunk<Product[], any | undefined>(
     'products/postProducts',
     async (body, thunkAPI) => {
         console.log(body);

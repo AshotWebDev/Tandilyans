@@ -20,7 +20,7 @@ export function CardModal() {
   const savedProducts = localStorage.getItem("savedProducts");
   const [parsedCards, setParsedCards] = useState<any[]>([]);
   const isActiveCartStatus = useAppSelector(isActiveCart);
-  const iconRef = useRef(null);
+  const iconRef = useRef<HTMLDivElement | null>(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -85,7 +85,7 @@ export function CardModal() {
                 <div className="flex items-center justify-between relative" key={item._id}>
                   <div className="flex items-end space-x-4">
                     <img
-                      src={`http://localhost:4000${item.img}`}
+                      src={item.img}
                       alt={item.name}
                       className="h-16 w-16"
                     />
