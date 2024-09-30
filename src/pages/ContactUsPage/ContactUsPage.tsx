@@ -4,8 +4,7 @@ import { Facebook, Instagram, Mail, Phone } from "lucide-react";
 import { useState } from "react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Terminal } from "lucide-react";
-
-const contactImg = "src/assets/bannerImg2.jpg";
+import contactImg from '@/assets/bannerImg2.jpg'
 const ContactUsPage = () => {
     const dispatch = useAppDispatch();
     const [showAlert, setShowAlert] = useState(false);
